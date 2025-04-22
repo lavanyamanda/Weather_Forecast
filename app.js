@@ -1,4 +1,4 @@
-const apiKey = 'cb73a6645f5372c55f500a209205ad97'; // API_key
+const apiKey = 'API Key'; // API_key
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast';
 
