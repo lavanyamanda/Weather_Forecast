@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1779/1779940.png">
+</head>
+
+<body class="bg-gradient-to-r from-blue-300 to-red-600 font-sans">
+
+    <!-- Main container -->
+    <div class="max-w-lg mx-auto p-6 bg-white rounded-xl shadow-xl mt-12">
+        <h1 class="text-4xl font-semibold text-center text-brown-800 mb-8">Weather Forecast</h1>
+
+        <!-- Search by City -->
+        <div class="mb-6">
+            <input type="text" id="city" class="w-full p-4 border border-gray-300 rounded-xl text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out" placeholder="Enter city name">
+        </div>
+
+        <button id="getWeather" class="w-full bg-yellow-600 text-white p-3 rounded-xl text-xl hover:bg-orange-700 focus:outline-none transition duration-200 ease-in-out transform hover:scale-105">
+            Get Weather by City
+        </button>
+
+        <!-- Get Weather by Current Location -->
+        <button id="getCurrentLocation" class="w-full bg-green-600 text-white p-3 rounded-xl text-xl mt-4 hover:bg-green-700 focus:outline-none transition duration-200 ease-in-out transform hover:scale-105">
+            Get Weather by Current Location
+        </button>
+
+        <!-- Recently Searched Cities Dropdown -->
+        <div id="recentCities" class="mt-6">
+            <select id="cityDropdown" class="w-full p-4 border border-gray-300 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out">
+                <option value="">Recently Searched Cities</option>
+            </select>
+        </div>
+
+        <!-- Weather Information -->
+        <div id="weatherInfo" class="mt-6 text-center text-gray-700">
+            <div id="weatherIcon" class="text-4xl mt-4"></div>
+            <div id="temperature" class="text-2xl font-semibold mt-4"></div>
+            <div id="description" class="text-lg mt-2 text-gray-500"></div>
+            <div id="humidity" class="mt-4 text-lg"></div>
+            <div id="windSpeed" class="mt-4 text-lg"></div>
+        </div>
+
+        <!-- Extended Forecast -->
+        <div id="forecast" class="mt-8 text-center">
+            <h2 class="text-2xl font-semibold text-blue-800 mb-6">5-Day Forecast</h2>
+            <div id="forecastList" class="grid grid-cols-2 sm:grid-cols-3 sm:grid-cols-5 gap-8">
+                <!-- Each forecast card will be dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
